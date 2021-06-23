@@ -1,32 +1,27 @@
-# Prerequisites
-*.d
+//Program for checking the eligiblity of the user for voting. For myCaptain project
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
 
-# Precompiled Headers
-*.gch
-*.pch
+#include<iostream>
+using namespace std;
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+int main() {
+    cout<< "This is the campaign for checking your eligiblity of voteing by myCaptain\n"; 
 
-# Fortran module files
-*.mod
-*.smod
+    int age;
+    cout << "Enter Your age & we will tell you\nYou are eligible for voteing or not:-\n";
+    cin>>age;
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+    if (age >= 18 && age < 100) {
+        cout << "Superb You are eligible for voting.\n";
+    }
+    else if (age>100){
+        cout << "You are too old but still eligible for voting";
+    } 
+    else {
+        cout << "You are not eligible for voting.\n";
+        cout << "You will be eligible for voting after " << 18-age <<" years.";
+    }
 
-# Executables
-*.exe
-*.out
-*.app
+    return 0;
+    
+}
